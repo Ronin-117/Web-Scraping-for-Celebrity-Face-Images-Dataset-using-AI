@@ -117,10 +117,3 @@ This project automates the process of creating image datasets of celebrities by 
 *   Please be mindful of website terms of service and copyright laws when downloading images.
 *   Avoid excessively high download rates (adjust `threads` and `pause_time` if necessary) to prevent being blocked by image hosts or search engines. The current settings in `data_scraper2.py` include politeness measures (batching, pauses).
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for suggestions, bug reports, or improvements.
-
-## License
-
-(Optional: Add a license file, e.g., MIT License, and mention it here.)
