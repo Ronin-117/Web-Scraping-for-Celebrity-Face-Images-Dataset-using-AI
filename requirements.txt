@@ -1,0 +1,5 @@
+requests
+duckduckgo-search
+pydantic
+google-generativeai
+google
