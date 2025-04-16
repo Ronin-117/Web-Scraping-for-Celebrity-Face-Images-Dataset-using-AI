@@ -175,3 +175,5 @@ cython_debug/
 
 images/
 config_s.py
+face_dataset/
+group_face/

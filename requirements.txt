@@ -3,3 +3,6 @@ duckduckgo-search
 pydantic
 google-generativeai
 google
+mtcnn 
+tensorflow 
+Pillow
