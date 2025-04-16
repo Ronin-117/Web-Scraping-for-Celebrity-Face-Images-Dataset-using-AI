@@ -51,7 +51,7 @@ def get_new_celebrity_names():
     
     return celebrities
 
-def start_scraping(celebrity_count):
+def start_scraping(celebrity_count, images_per_folder):
     while len(os.listdir("images")) < celebrity_count:
 
         celebrities = get_new_celebrity_names()
@@ -68,10 +68,10 @@ def start_scraping(celebrity_count):
                     f"{celebrity} photoshoot",
                 ],
                 save_name=f"{celebrity}",
-                num_images=2000
+                num_images=images_per_folder
             )
                     
 
 
 if __name__ == "__main__":
-    start_scraping(celebrity_count=100)
+    start_scraping(celebrity_count=100,images_per_folder=1000)

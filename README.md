@@ -1,4 +1,4 @@
-# Web Scraping for Images Dataset using AI
+# Web Scraping for Celebrity face Images Dataset using AI
 
 This project automates the process of creating image datasets of celebrities by scraping images from the web using DuckDuckGo Search. It leverages Google's Gemini AI to generate lists of celebrities, ensuring a diverse dataset and avoiding redundant scraping of already processed individuals.
 
