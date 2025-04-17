@@ -263,11 +263,13 @@ def process_images_for_faces():
 
 if __name__ == "__main__":
     TARGET_CELEBRITY_COUNT = 100
-    IMAGES_PER_CELEBRITY = 1300 # Keep this reasonably high for scraping
+    IMAGES_PER_CELEBRITY = 1300 
 
-
-    # Step 1: Scrape images
-    start_scraping(celebrity_count=TARGET_CELEBRITY_COUNT, images_per_folder=IMAGES_PER_CELEBRITY)
+    try:
+        # Step 1: Scrape images
+        start_scraping(celebrity_count=TARGET_CELEBRITY_COUNT, images_per_folder=IMAGES_PER_CELEBRITY)
+    except Exception as e :
+        print("scarping stopped midway!!")
 
     # Step 2: Process downloaded images for faces
     process_images_for_faces()
