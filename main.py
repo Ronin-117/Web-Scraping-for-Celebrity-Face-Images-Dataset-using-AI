@@ -42,7 +42,7 @@ def get_new_celebrity_names():
     # Generate content using the Gemini API
     response = client.models.generate_content(
             model=MODEL_ID,
-            contents=f"Generate a list of celebrity names .like this: 'celebrity : their name'. make sure the list names that are different to {celebrity_folders} ",
+            contents=f"Generate a list of celebrity names .like this: 'celebrity : their name'. make sure the listed names are different to names in this list '{celebrity_folders} ' ",
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
             ),
