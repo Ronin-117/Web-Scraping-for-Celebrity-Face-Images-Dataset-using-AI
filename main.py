@@ -17,7 +17,7 @@ import logging
 IMAGES_FOLDER = "images"
 FACE_DATASET_FOLDER = "face_dataset"
 GROUP_FACE_FOLDER = "group_face"
-MAX_WORKERS_FACE_PROCESSING = 10 # Adjust based on your CPU cores
+MAX_WORKERS_FACE_PROCESSING = 8 # Adjust based on your CPU cores
 
 # --- Logging Setup ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -76,8 +76,10 @@ def start_scraping(celebrity_count, images_per_folder):
                     f"{celebrity} actor",
                     f"{celebrity} potraits",
                     f"{celebrity} hd",
-                    f"{celebrity} movie scenes",
                     f"{celebrity} photoshoot",
+                    f"{celebrity} Solo images",
+                    f"{celebrity} Face",
+                    f"{celebrity} Smiling",
                 ],
                 save_name=f"{celebrity}",
                 num_images=images_per_folder
