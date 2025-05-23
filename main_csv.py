@@ -56,34 +56,37 @@ def start_scraping(csv_filepath: str, images_per_folder: int):
 
         download_images(
             search_terms=[
-                f"celebrity : {celebrity_name} images",
-                f"celebrity : {celebrity_name} awards",
-                f"celebrity : {celebrity_name} actor",
-                f"celebrity : {celebrity_name} portraits", # Corrected typo
-                f"celebrity : {celebrity_name} hd",
-                f"celebrity : {celebrity_name} photoshoot",
-                f"celebrity : {celebrity_name} Solo images",
-                f"celebrity : {celebrity_name} Face",
-                f"celebrity : {celebrity_name} Smiling",
+                f" {celebrity_name} images",
+                f" {celebrity_name} awards",
+                f" {celebrity_name} actor",
+                f" {celebrity_name} portraits", # Corrected typo
+                f" {celebrity_name} hd",
+                f" {celebrity_name} photoshoot",
+                f" {celebrity_name} Solo images",
+                f" {celebrity_name} Face",
+                f" {celebrity_name} Smiling",
             ],
             save_name=celebrity_name, # Use the name directly
             num_images=images_per_folder
         )       
 
     logging.info(f"--- Finished scraping images for all celebrities in '{csv_filepath}' ---")
+    return True
 
 if __name__ == "__main__":
 
     # Define the path to your CSV file and the number of images per celebrity
     CELEBRITY_CSV_FILE = "celebs_batch_A_1.csv"  # Ensure this file exists with a 'full_name' column
     IMAGES_PER_CELEBRITY = 1000  # Adjust as needed, original was 1300
-
-    try:
-        logging.info("--- Starting Image Scraping Process ---")
-        start_scraping(csv_filepath=CELEBRITY_CSV_FILE, images_per_folder=IMAGES_PER_CELEBRITY)
-        logging.info("--- Image Scraping Process Finished ---")
-    except Exception as e :
-        logging.error(f"Image scraping stopped midway due to an unhandled error: {e}", exc_info=True)
+    
+    while True:
+        try:
+            logging.info("--- Starting Image Scraping Process ---")
+            if start_scraping(csv_filepath=CELEBRITY_CSV_FILE, images_per_folder=IMAGES_PER_CELEBRITY):
+                break
+            logging.info("--- Image Scraping Process Finished ---")
+        except Exception as e :
+            logging.error(f"Image scraping stopped midway due to an unhandled error: {e}", exc_info=True)
 
     logging.info("--- All Tasks Finished ---")
 
