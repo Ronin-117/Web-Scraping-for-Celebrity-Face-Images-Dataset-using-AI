@@ -5,7 +5,7 @@ import logging
 import time
 
 # --- Configuration ---
-IMAGES_FOLDER = "images"
+IMAGES_FOLDER = r"D:\MACHINE LEARNING\FaceRec\images_300"
 
 # --- Logging Setup ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
