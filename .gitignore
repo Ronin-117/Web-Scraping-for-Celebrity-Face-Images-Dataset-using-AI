@@ -178,3 +178,4 @@ config_s.py
 face_dataset/
 group_face/
 cropped_pics/
+cleaned_dataset

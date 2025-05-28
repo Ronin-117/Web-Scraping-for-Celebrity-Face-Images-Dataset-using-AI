@@ -1,3 +1,12 @@
+# Processing Complete.
+# Total images processed and saved: 257656
+# Images skipped (no face detected or low confidence): 25604
+# Images where multiple faces were detected (processed largest): 56056
+# Errors encountered: 3872
+# Cropped images saved in: 'C:\Users\njne2\Desktop\Cuda_PWR\CREATIVE\Web-Scraping-for-Images-Dataset-using-AI\cropped_pics'
+
+
+
 import cv2
 import os
 import sys
